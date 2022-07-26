@@ -1,0 +1,86 @@
+<!--pages/home/home.wxml-->
+<view wx:if="{{jurisdiction==1}}">
+    <swiper indicator-dots="true" circular="true" autoplay="true">
+        <swiper-item wx:for="{{swiperImgs}}" wx:key="id">
+            <image src="{{item.imgUrl}}" mode="aspectFill"></image>
+        </swiper-item>
+    </swiper>
+    <view class="grid-list">
+        <navigator class="grid-item" url="/pages/list/list">
+            <image src="../../statics/epidemicArea.png" /><br />
+            <text class="item-text">疫情信息</text>
+        </navigator>
+        <navigator class="grid-item" url="/pages/navi/navi?part=emergencyTreatment">
+            <image src="../../statics/emergencyTreatment.png" /><br />
+            <text class="item-text">急诊</text>
+        </navigator>
+        <navigator class="grid-item" wx:if="{{isEpidemicArea}}" url="">
+            <image src="" /><br />
+            <text class="item-text">物资</text>
+        </navigator>
+        <navigator class="grid-item" url="/pages/navi/navi?part=feverClinic">
+            <image src="../../statics/feverClinic.png" /><br />
+            <text class="item-text">发热门诊</text>
+        </navigator>
+        <navigator class="grid-item" url="/pages/navi/navi?part=testInstitution">
+            <image src="../../statics/testInstitution.png" /><br />
+            <text class="item-text">核酸检测</text>
+        </navigator>
+        <navigator class="grid-item" url="">
+            <image src="../../statics/volunteer.png" /><br />
+            <text class="item-text">加入志愿者</text>
+        </navigator>
+    </view>
+</view>
+
+
+<view class="pageHome" wx:if="{{jurisdiction==0}}">
+    <text wx:for="{{navBarText}}" wx:key="id" class="title {{currentBar==index ? 'active' : ''}}" bindtap="switchBar" data-current="{{index}}">{{item}}</text>
+    <swiper bindanimationfinish="swiperSwitchBar" class="contentSwiper" duration="200" style="height: {{height}}rpx;" circular="false">
+        <swiper-item wx:if="{{currentBar==0}}" class="currentContent">
+            <view class="list-box" wx:for="{{destination_next}}" wx:key="id">
+                <view class="box-content">
+                    <view class="listForm">
+                        <view class="listItem">
+                            <text class="listText">{{item.name}}</text>
+                        </view>
+                        <view class="listItem">
+                            <text class="listText">{{item.longitude}}， {{item.latitude}}</text>
+                        </view>
+                    </view>
+                    <!-- <view class="chat">
+                        消息
+                    </view> -->
+                    <view class="navigator" bindtap="receiveOrder" data-desid="{{index}}">
+                        接单
+                    </view>
+                </view>
+            </view>
+            <view class="bottomText">
+                <text>没有更多内容了</text>
+            </view>
+        </swiper-item>
+        <swiper-item wx:if="{{currentBar==1}}" class="currentContent">
+            <view class="list-box" wx:for="{{destination}}" wx:key="id">
+                <view class="box-content">
+                    <view class="listForm">
+                        <view class="listItem">
+                            <text class="listText">{{item.name}}</text>
+                        </view>
+                        <view class="listItem">
+                        </view>
+                    </view>
+                    <view class="chat">
+                        消息
+                    </view>
+                    <view bindtap="startNavigate" data-desid="{{index}}" class="navigator">
+                        导航
+                    </view>
+                </view>
+            </view>
+            <view class="bottomText">
+                <text>没有更多内容了</text>
+            </view>
+        </swiper-item>
+    </swiper>
+</view>

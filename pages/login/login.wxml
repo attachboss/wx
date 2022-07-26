@@ -1,0 +1,38 @@
+<view class="v1">
+
+    <!-- v2父容器  子view使用绝对布局 -->
+    <view class="v2">
+        <view class="dltext">登录</view>
+
+        <!-- 账号 -->
+        <view class="phoneCs">
+            <image src="/statics/myicon-active.png" class="ph"></image>
+            <input placeholder="请输入账号" bindinput="getContent" />
+        </view>
+
+        <!-- 密码 -->
+        <view class=passwordCs">
+            <image src="/statics/pingjia.png" class="ps"></image>
+            <input placeholder="请输入密码" bindinput="getPassword" password="{{!isDisplay}}" />
+        </view>
+
+        <!-- 注册 和忘记密码  -->
+        <view class="zhuce">
+            <navigator open-type='navigate' url="/pages/register/register">立即注册</navigator>
+            <navigator open-type='navigate' url="/pages/mima/mima">忘记密码?</navigator>
+        </view>
+        <!-- 登录按钮 -->
+        <view class="denglu">
+            <button class="btn-dl" type="default" bindtap="goadmin" style="background-color: #009688; color: #000;">登录</button>
+        </view>
+
+        <!-- 协议区  xieyi -->
+        <view class="xieyi">
+            <checkbox-group bindchange="changeAgreeprotocol">
+                <checkbox class="isXY"></checkbox>
+            </checkbox-group>
+            <view class="text-xy">同意小程序的《平台协议》</view>
+        </view>
+    </view>
+
+</view>>

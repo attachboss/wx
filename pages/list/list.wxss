@@ -1,0 +1,34 @@
+/* pages/list/list.wxss */
+.item-list {
+    border-bottom: 1px solid #efefef;
+    box-shadow: 1rpx 1rpx 15rpx #ddd;
+    margin: 10rpx;
+    height: 250rpx;
+    display: flex;
+}
+
+.item-img {
+    border: 2rpx solid darkgray;
+    border-radius: 20px;
+    width: 80rpx;
+    height: 80rpx;
+}
+
+.item-thumb {
+    margin: 20rpx;
+}
+
+.item-details {
+    margin: 20;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+}
+
+.text-name {
+    font-weight: 600;
+}
+
+.text-district {
+    border: gainsboro 2rpx dashed;
+}

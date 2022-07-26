@@ -1,0 +1,8 @@
+<view class="map_container">
+    <view wx:if="{{isPopup}}" class="popupContainer">
+        <view wx:if="{{isPopup}}" class="closePopup" bindtap="closePopup"></view>
+        <view wx:if="{{isPopup}}" class="popupContent" style="font-weight: 900;">{{popupContent.name}}</view>
+        <view wx:if="{{isPopup}}" class="popupContent">{{popupContent.description}}</view>
+    </view>
+    <map class='map' id="indexMap" longitude='{{longitude}}' latitude='{{latitude}}' scale='{{scale}}' markers='{{markers}}' bindcontroltap="bindcontroltap" polyline='{{polyline}}' circles="{{circles}}" bindmarkertap='bindmarkertap' show-location></map>
+</view>

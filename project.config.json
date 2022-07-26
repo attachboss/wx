@@ -1,20 +1,12 @@
 {
-    "description": "项目配置文件",
-    "packOptions": {
-        "ignore": [
-            {
-                "type": "file",
-                "value": ".eslintrc.js"
-            }
-        ]
-    },
+    "description": "项目配置文件，详见文档：https://developers.weixin.qq.com/miniprogram/dev/devtools/projectconfig.html",
     "setting": {
         "bundle": false,
         "userConfirmedBundleSwitch": false,
         "urlCheck": true,
         "scopeDataCheck": false,
         "coverView": true,
-        "es6": true,
+        "es6": false,
         "postcss": true,
         "compileHotReLoad": true,
         "lazyloadPlaceholderEnable": false,
@@ -28,47 +20,35 @@
         "nodeModules": false,
         "enhance": true,
         "useMultiFrameRuntime": true,
-        "useApiHook": true,
-        "useApiHostProcess": true,
         "showShadowRootInWxmlPanel": true,
         "packNpmManually": false,
         "enableEngineNative": false,
         "packNpmRelationList": [],
         "minifyWXSS": true,
         "showES6CompileOption": false,
-        "minifyWXML": true
+        "minifyWXML": true,
+        "checkSiteMap": true,
+        "checkInvalidKey": true,
+        "babelSetting": {
+            "ignore": [],
+            "disablePlugins": [],
+            "outputPath": ""
+        },
+        "disableUseStrict": false,
+        "useCompilerPlugins": false,
+        "ignoreUploadUnusedFiles": true,
+        "useStaticServer": true
     },
     "compileType": "miniprogram",
-    "libVersion": "2.19.4",
-    "appid": "wx07fd32edf3bf2140",
-    "projectname": "example",
-    "debugOptions": {
-        "hidedInDevtools": []
+    "condition": {},
+    "editorSetting": {
+        "tabIndent": "insertSpaces",
+        "tabSize": 4
     },
-    "scripts": {},
-    "staticServerOptions": {
-        "baseURL": "",
-        "servePath": ""
+    "libVersion": "2.25.0",
+    "packOptions": {
+        "ignore": [],
+        "include": []
     },
-    "isGameTourist": false,
-    "condition": {
-        "search": {
-            "list": []
-        },
-        "conversation": {
-            "list": []
-        },
-        "game": {
-            "list": []
-        },
-        "plugin": {
-            "list": []
-        },
-        "gamePlugin": {
-            "list": []
-        },
-        "miniprogram": {
-            "list": []
-        }
-    }
+    "appid": "wx26c1b9924b08853a"
 }

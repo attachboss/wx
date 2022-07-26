@@ -1,0 +1,15 @@
+<!--pages/mima/mima.wxml-->
+<view id="total">
+<form bindsubmit="create_zhuce">
+<view id="t1">
+<text>账号</text><input type="text" bindinput="username"  id="use" placeholder="账号" value="{{username}}"></input>
+</view>
+<view id="t2">
+<text>新密码</text><input type="password" bindinput="password" id="pass1" placeholder="新密码" value="{{password1}}"></input>
+</view>
+<view id="t3">
+<text>确认新密码</text><input type="password" bindinput="password1" id="pass2" placeholder="确认新密码" value="{{password2}}"></input>
+</view>
+<button id="btn1" bindtap="goZhuce"><text>注册</text></button>
+</form>
+</view>

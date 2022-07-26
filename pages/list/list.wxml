@@ -1,0 +1,10 @@
+<!--pages/list/list.wxml-->
+<view class="item-list" wx:for="{{list}}" wx:key="id">
+    <view class="item-thumb">
+        <image src="" mode="aspectFit" class="item-img"></image>
+    </view>
+    <view class="item-details">
+        <text class="text-name">{{item.name}}</text>
+        <text class="text-district">成都市{{item.district}}</text>
+    </view>
+</view>

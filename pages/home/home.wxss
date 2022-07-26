@@ -1,0 +1,121 @@
+/* pages/home/home.wxss */
+/*用户端界面*/
+swiper{
+    height: 350rpx;
+}
+swiper image{
+    height: 100%;
+    width: 100%;
+}
+.grid-list{
+    display: flex;
+    flex-wrap:wrap;
+}
+.grid-item{
+    border: 1px dashed darkgray;
+    border-radius: 5px;
+    width: 33.33%;
+    height: 200rpx;
+    display:flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    box-sizing: border-box;
+}
+.grid-item image{
+    width: 80rpx;
+    height: 80rpx;
+    margin-top: 20rpx;
+}
+.grid-item text{
+    font-size:28rpx;
+    margin-top: 20rpx;
+}
+
+
+/*志愿者端界面*/
+.pageHome{
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    display: flex;
+    font-size: 30rpx;
+    color: #bbbbbb;
+}
+.title{
+    height:100rpx;
+    flex: auto;
+    flex-direction: row;
+    text-align: center;
+    line-height: 90rpx;
+}
+.title.active{
+    color: var(--themeColor);
+    border-bottom: var(--themeColor) 2rpx solid;
+}
+.contentSwiper{
+    position: absolute;
+    width: 100%;
+    top: 100rpx;
+}
+.currentContent{
+    width: 100%;
+}
+
+.list-box{
+    display:flex;
+    justify-content: space-around;
+    margin-top:30rpx;
+    color: #224242;
+}
+.box-content{
+    background-color:rgba(214, 214, 214, 0.425);
+    opacity: 0.8;
+    width: 85%;
+    height: 400rpx;
+    border-radius: 20px;
+    text-align: center;
+    box-shadow: 2px 2px 2px 2px #7c7c7c;
+}
+.listForm{
+    position: absolute;
+    height: 300rpx;
+    width: 75%;
+    margin-left: 40rpx;
+}
+.listItem{
+    width: 75%;
+    height: 33%;
+    margin-left: 80rpx;
+    display: table;
+    border-bottom: dashed 2px rgb(97, 96, 96);
+}
+.box-content .navigator{
+    position: absolute;
+    background-color: rgba(65, 225, 137, 0.329);
+    border-radius: 12%;
+    height: 60rpx;
+    width: 140rpx;
+    right: 100rpx;
+    margin-top: 300rpx;
+    line-height: 60rpx;
+    text-align: center;
+}
+.box-content .chat{
+    position: absolute;
+    background-color: rgba(255, 255, 255, 0.733);
+    border-radius: 12%;
+    height: 60rpx;
+    width: 140rpx;
+    right: 260rpx;
+    margin-top: 300rpx;
+    line-height: 60rpx;
+    text-align: center;
+}
+.bottomText{
+    height: 60rpx;
+    padding: 20rpx;
+    line-height: 60rpx;
+    width: 100%;
+    text-align: center;
+}

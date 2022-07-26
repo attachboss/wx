@@ -1,19 +1,55 @@
 {
-  "pages":[
-    "pages/index/index",
-    "pages/logs/logs"
-  ],
-  "globalStyle": {
-    "navigationBarTextStyle": "black",
-    "navigationBarBackgroundColor": "#000080",
-    "backgroungColor": "black"
-  },
-  "window":{
-    "backgroundTextStyle":"light",
-    "navigationBarBackgroundColor": "#fff",
-    "navigationBarTitleText": "Weixin",
-    "navigationBarTextStyle":"black"
-  },
-  "style": "v2",
-  "sitemapLocation": "sitemap.json"
+    "pages": [
+        "pages/login/login",
+        "pages/home/home",
+        "pages/test/test",
+        "pages/list/list",
+        "pages/navi/navi",
+        "pages/me/me",
+        "pages/oppoint/oppoint",
+        "pages/register/register",
+        "pages/mima/mima"
+    ],
+    "window": {
+        "backgroundTextStyle": "dark",
+        "navigationBarBackgroundColor": "#5F9EA0",
+        "navigationBarTitleText": "微应急",
+        "navigationBarTextStyle": "white",
+        "backgroundColor": "#A9A9A9"
+    },
+    "tabBar": {
+        "list": [
+            {
+                "pagePath": "pages/home/home",
+                "iconPath": "statics/icons8-home-200.png",
+                "selectedIconPath": "statics/icons8-home-active.png"
+            },
+            {
+                "pagePath": "pages/test/test",
+                "iconPath": "statics/icons8-map-200.png",
+                "selectedIconPath": "statics/icons8-map-active.png"
+            },
+            {
+                "pagePath": "pages/me/me",
+                "iconPath": "statics/icons8-contacts-200.png",
+                "selectedIconPath": "statics/icons8-contacts-active.png"
+            }
+        ],
+        "selectedColor": "#FFFFFF",
+        "position": "bottom",
+        "color": "#000000",
+        "backgroundColor": "#5F9EA0"
+    },
+    "permission": {
+        "scope.userLocation": {
+            "desc": "你的位置信息将用于小程序定位"
+        }
+    },
+    "sitemapLocation": "sitemap.json",
+    "plugins": {
+        "routePlan": {
+            "version": "1.0.19",
+            "provider": "wx50b5593e81dd937a"
+        }
+    }
 }

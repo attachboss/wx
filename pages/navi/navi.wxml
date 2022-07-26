@@ -1,0 +1,19 @@
+<!--pages/navi/navi.wxml-->
+<view class="page">
+    <view class="searchBar">
+        <input placeholder="输入地址查询..." class="searchInput" bindinput="getResult" value="{{backFill}}" />
+        <image class="btnSearch" src="../../statics/search.png" mode="aspectFit" catchtap="nearbySearch"></image>
+    </view>
+    <scroll-view class="searchContainer" >
+        <view wx:if="{{showSearchBar}}" wx:for="{{suggestion}}" wx:key="id" catchtap="tapFill" id="{{index}}" class="searchContent">
+            <view class="item-title">{{item.title}}</view>
+            <view class="item-details">地址：{{item.addr}}</view>
+        </view>
+    </scroll-view>
+    <view wx:if="{{isPopup}}" class="popupContainer">
+        <view wx:if="{{isPopup}}" class="closePopup" bindtap="closePopup"></view>
+        <view wx:if="{{isPopup}}" class="popupContent" style="font-weight: 900;">{{popupContent.name}}</view>
+        <view wx:if="{{isPopup}}" class="popupContent">{{popupContent.description}}</view>
+    </view>
+    <map id="mapView" class='map' longitude='{{destiPos.longitude}}' latitude='{{destiPos.latitude}}' scale='{{scale}}' bindregionchange="regionchange" polyline='{{polyline}}' circles="{{circles}}" bindmarkertap='markertap' show-location></map>
+</view>

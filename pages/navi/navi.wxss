@@ -1,0 +1,73 @@
+/* pages/navi/navi.wxss */
+.page{
+    height: 1400rpx;
+}
+map{
+    width: 100%;
+    height: 100%;
+}
+.popupContainer{
+    width: 75%;
+    height: 200rpx;
+    z-index: 1;
+    background-color: #fff;
+    border: 4rpx dashed darkgray;
+    border-radius: 8%;
+    border-top-right-radius: 0%;
+    position: absolute;
+    margin-top: 150rpx;
+    opacity: 0.8;
+}
+.popupContent{
+    width: 100%;
+    float: left;
+    margin: 10rpx;
+    font-size: small;
+}
+.closePopup{
+    width: 30rpx;
+    height: 30rpx;
+    float: right;
+    border-bottom-left-radius: 30%;
+    border: 4rpx dashed darkgray;
+    background-color:rgba(218, 114, 114, 0.863);
+}
+.searchBar{
+    font-family:Georgia, 'Times New Roman', Times, serif;
+    width: 80%;
+    margin: 10rpx;
+    padding: 20rpx;
+    position: absolute;
+    z-index: 1;
+    background-color: rgba(255, 255, 255, 0.9);
+}
+.searchInput{
+    width: 80%;
+}
+.btnSearch{
+    width: 100rpx;
+    height: 100%;
+    position: absolute;
+    z-index: 1;
+    right: 0;
+    top:0;
+    opacity:0.3
+}
+.searchContainer{
+    margin-top:100rpx;
+    margin-left: 10rpx;
+    width: 500rpx;
+    position: absolute;
+    z-index: 1;
+    background-color: rgba(255, 255, 255, 0.8);
+}
+.searchContent{
+    border-bottom:1rpx rgba(0, 0, 0, 0.253) solid;
+}
+.item-title{
+    font-weight:600;
+    font-size: smaller;
+}
+.item-details{
+    font-size: small;
+}
