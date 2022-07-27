@@ -16,9 +16,11 @@
 
 .item-thumb {
     margin: 20rpx;
+    width: 12%;
 }
 
 .item-details {
+    width: 65%;
     margin: 20;
     display: flex;
     flex-direction: column;
@@ -31,4 +33,9 @@
 
 .text-district {
     border: gainsboro 2rpx dashed;
+}
+
+.item-distance {
+    margin: 20rpx;
+    padding-top: 20rpx;
 }

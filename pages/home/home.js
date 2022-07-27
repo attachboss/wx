@@ -147,7 +147,14 @@ Page({
      * 生命周期函数--监听页面加载
      */
     onLoad() {
-        this.cloudCheckJuris(app.dataParams.username)
+        wx.getLocation({
+            type: "wgs84",
+            success: function (res) {
+                app.globalData.latitude = res.latitude;
+                app.globalData.longitude = res.longitude;
+            }
+        });
+        this.cloudCheckJuris(app.dataParams.username);
     },
 
     //在云数据库中查询账户权限  并在页面中加载数据

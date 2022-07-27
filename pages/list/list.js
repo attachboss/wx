@@ -1,25 +1,27 @@
 // pages/list/list.js
+const app = getApp();
 Page({
 
     /**
      * 页面的初始数据
      */
     data: {
-        query: {},
         list: [],
         page: 1,
         pageSize: 10,
         totalPage: 0,
-        isLoading: false
+        isLoading: false,
+        latitude: 0,
+        longitude: 0,
     },
 
     /**
      * 生命周期函数--监听页面加载
      */
-    onLoad(options) {
-        //动态设置list页面的标题
+    onLoad() {
         this.setData({
-            query: options,
+            latitude: app.globalData.latitude,
+            longitude: app.globalData.longitude
         });
         this.getList()
     },
@@ -39,8 +41,6 @@ Page({
             success: (res) => {
                 this.setData({
                     list: [...this.data.list, ...res.data],
-                    //减零是因为返回的是字符串类型
-                    //total: res.header["X-Total-Count"] - 0
                 });
             },
             complete: () => {

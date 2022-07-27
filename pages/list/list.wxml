@@ -1,10 +1,14 @@
 <!--pages/list/list.wxml-->
 <view class="item-list" wx:for="{{list}}" wx:key="id">
     <view class="item-thumb">
-        <image src="" mode="aspectFit" class="item-img"></image>
+        <image src="../../statics/location-red.png" mode="aspectFit" class="item-img"></image>
     </view>
     <view class="item-details">
         <text class="text-name">{{item.name}}</text>
         <text class="text-district">成都市{{item.district}}</text>
+    </view>
+    <view class="item-distance">
+        <wxs module="distance" src="../../tool/distance.wxs"></wxs>
+        <text>距离：{{distance.getDistance(latitude, longitude, item.latitude, item.longitude)}}km</text>
     </view>
 </view>

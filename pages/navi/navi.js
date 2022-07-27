@@ -1,4 +1,5 @@
 // pages/test/test.js
+const app = getApp();
 var QQMapWX = require("../../tool/qqmap-wx-jssdk.min.js");
 var qqmapsdk = new QQMapWX({
     key: "YRRBZ-YH6C4-VPCUV-DZ5UW-C4U3T-Y6FXB"
@@ -62,18 +63,12 @@ Page({
      */
     onLoad: function (options) {
         this.GetLocationArray(options.part)
-        var that = this;
-        wx.getLocation({
-            type: "wgs84",
-            success: function (res) {
-                that.setData({
-                    userPos: {
-                        longitude: res.longitude,
-                        latitude: res.latitude
-                    }
-                })
+        this.setData({
+            userPos: {
+                longitude: app.globalData.longitude,
+                latitude: app.globalData.latitude
             }
-        });
+        })
     },
 
     getResult(e) {
